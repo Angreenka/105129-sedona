@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Nastasia Evgrafova](https://up.htmlacademy.ru/htmlcss/20/user/105129).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Шашева](https://htmlacademy.ru/profile/loyso).
 
 ---
 
