@@ -73,12 +73,33 @@
       <section class="booking">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <span class="button-booking">Поиск гостиницы в Седоне</span>
+        <button class="button-booking">Поиск гостиницы в Седоне</button>
       </section>
       <section class="modal-booking">
         <h2 class="visually-hidden">Форма бронирования</h2>
-          <!-- Здесь будет форма -->
-          <a class="button" href="hotels.html">Найти</a>
+        <form class="booking-form" action="#" method="post">
+          <p class="booking-item">
+            <label for="booking-arrival">Дата заезда:</label>
+            <input id="booking-arrival" type="date" name="date" placeholder="24 апреля 2017">
+          </p>
+          <p class="booking-item">
+            <label for="booking-departure">Дата выезда:</label>
+            <input id="booking-departure" type="date" name="date" placeholder="4 июля 2017">
+          </p>
+          <p class="booking-item">
+            <label for="booking-adults">Взрослые:</label>
+            <button class="button-reduce" type="button" value="-">Убавить</button>
+            <input id="booking-adults" type="text" name="name" placeholder="2">
+            <button class="button-add" type="button" value="+">Добавить</button>
+          </p>
+          <p class="booking-item">
+            <label for="booking-children">Дети:</label>
+            <button class="button-reduce" type="button" value="-">Убавить</button>
+            <input id="booking-children" type="text" name="name" placeholder="0">
+            <button class="button-add" type="button" value="+">Добавить</button>
+          </p>
+          <button class="button" type="submit" value="Найти">Найти</button>
+        </form>
       </section>
       <section class="map">
         <img src="img/index_map.jpg" width="1200" height="594" alt="Карта Седоны">
