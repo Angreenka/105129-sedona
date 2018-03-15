@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,12 +63,12 @@
         </li>
         <li class="feature-small">
           <h3 class="black">Красивая дорога</h3>
-          <p class="black-text">№4</p>
+          <p>№4</p>
           <p class="black-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li class="feature-small">
           <h3 class="black">Мало туристов</h3>
-          <p class="black-text">№5</p>
+          <p>№5</p>
           <p class="black-text">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ul>
@@ -73,34 +76,34 @@
     <section class="booking">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a class="button-booking" href="#">Поиск гостиницы в Седоне</a>
+      <a class="button-brown" href="#">Поиск гостиницы в Седоне</a>
     </section>
     <section class="modal-booking">
       <h2 class="visually-hidden">Форма бронирования</h2>
       <form class="booking-form" action="#" method="post">
         <p class="booking-item">
           <label for="booking-arrival">Дата заезда:</label>
-          <input id="booking-arrival" type="text" name="date" placeholder="24 апреля 2017">
+          <input id="booking-arrival" type="text" name="date-arrival" placeholder="24 апреля 2017">
           <button class="button-calendar" type="button">Календарь</button>
         </p>
         <p class="booking-item">
           <label for="booking-departure">Дата выезда:</label>
-          <input id="booking-departure" type="text" name="date" placeholder="4 июля 2017">
+          <input id="booking-departure" type="text" name="date-departure" placeholder="4 июля 2017">
           <button class="button-calendar" type="button">Календарь</button>
         </p>
         <p class="booking-item">
           <label for="booking-adults">Взрослые:</label>
           <button class="button-reduce" type="button" value="-">Убавить</button>
-          <input id="booking-adults" type="text" name="name" placeholder="2">
+          <input id="booking-adults" type="text" name="adults" placeholder="2">
           <button class="button-add" type="button" value="+">Добавить</button>
         </p>
         <p class="booking-item">
           <label for="booking-children">Дети:</label>
           <button class="button-reduce" type="button" value="-">Убавить</button>
-          <input id="booking-children" type="text" name="name" placeholder="0">
+          <input id="booking-children" type="text" name="children" placeholder="0">
           <button class="button-add" type="button" value="+">Добавить</button>
         </p>
-        <button class="button" type="submit" value="Найти">Найти</button>
+        <button class="button-blue" type="submit" value="Найти">Найти</button>
       </form>
     </section>
     <section class="map">
@@ -115,7 +118,7 @@
       <li><a class="social-button" href="#">Фейсбук</a></li>
       <li><a class="social-button" href="#">Ютуб</a></li>
     </ul>
-    <p class="footer-copyright">WEBSITE by</p>
+    <span class="footer-copyright">WEBSITE by</span>
     <a class="academy-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_htmlacademy.svg" width="115" height="41" alt="Логотип HTML Академии"></a>
   </footer>
 </body>
