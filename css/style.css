@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+/*Серая подложка*/
+
+.background {}
+
 /*Кнопки*/
 
 .button-blue {
@@ -31,7 +35,7 @@ a {
 }
 
 .button-blue:active {
-  color: #94b9d2;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
 
@@ -50,7 +54,7 @@ a {
 }
 
 .button-brown:active {
-  color: #857871;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
 
@@ -62,17 +66,15 @@ a {
   color: #fff;
   background-color: transparent;
   border: 2px solid #fff;
+  border-radius: 2px;
 }
 
 .button-white:hover, .button-white:active {
   color: #000;
   background-color: #fff;
-  border: none;
 }
 
-.visually-hidden {
-  
-}
+.visually-hidden {}
 
 /*Хедер*/
 
@@ -97,19 +99,19 @@ a {
 }
 
 .site-navigation a:active {
-  color: #cacaca;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation-current {
+.site-navigation-current a {
   color: #766357;
 }
 
-.site-navigation-current:hover {
-  color: #81b3d2;
+.site-navigation-current a:hover {
+  color: #766357;
 }
 
-.site-navigation-current:active {
-  color: #cacaca;
+.site-navigation-current a:active {
+  color: #766357;
 }
 
 /*Главная страница*/
@@ -117,12 +119,12 @@ a {
 /*Лид*/
 
 .intro {
-  color: #000;
   text-align: center;
   background-color: #fff;
 }
 
-.intro p:nth-child(3) {
+.intro .black {
+  color: #000;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -134,22 +136,26 @@ a {
   list-style: none;
 }
 
-/*Первое преимущество*/
-
-.feature-1 {
+.feature-title {
   color: #fff;
   text-align: center;
   background-color: #81b3d2;
-  background-image: url("../img/pic_1.jpg");
-  background-position: right;
-  background-size: 800px;
-  background-repeat: no-repeat;
 }
 
-.feature-1 h3 {
+.feature-title h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+}
+
+/*Первое преимущество*/
+
+.feature-first-pic {
+  background-image: url("../img/pic_1.jpg");
+  background-position: right;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
 }
 
 /*Дополнительные преимущества*/
@@ -168,22 +174,38 @@ a {
   font-weight: 700;
 }
 
-/*Второе преимущество*/
-
-.feature-2 {
-  color: #fff;
-  text-align: center;
-  background-color: #81b3d2;
-  background-image: url("../img/pic_2.jpg");
-  background-position: right;
-  background-size: 800px;
+.features-extra-first {
+  background-image: url("../img/icon-1.svg");
+  background-position: center;
+  background-size: auto;
   background-repeat: no-repeat;
+  background-color: #fff;
 }
 
-.feature-2 h3 {
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: 700;
+.features-extra-second {
+  background-image: url("../img/icon-3.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.features-extra-third {
+  background-image: url("../img/icon-2.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+/*Второе преимущество*/
+
+.feature-second-pic {
+  background-image: url("../img/pic_2.jpg");
+  background-position: right;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
 }
 
 /*Третье, четвертое, пятое преимущества*/
@@ -220,13 +242,13 @@ a {
 .modal-booking input {
   font: inherit;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
 }
 
 .modal-booking input:hover {
   font: inherit;
   background-color: #ebebeb;
-  border: none;
+  border: 2px solid #ebebeb;
 }
 
 .modal-booking input:focus {
@@ -264,40 +286,64 @@ a {
   color: #fff;
 }
 
-.filter-input-checkbox:disabled+label {
-  opacity: 0.5;
+.filter-input-checkbox:disabled {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .range-inputs input {
   font: inherit;
   background-color: transparent;
   border: 2px solid #fff;
+  border-radius: 2px;
 }
 
 /*Сортировка*/
+
+.sorting p {
+  color: #000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sorting h3 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
 
 .sorting-item {
   list-style: none;
 }
 
 .sorting-item a {
-  color: #cacaca;
-  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dashed #81b3d2;
+  text-decoration: none;
 }
 
 .sorting-item a:hover {
   color: #81b3d2;
-  text-decoration: underline;
 }
 
 .sorting-item a:active {
   color: #000;
-  text-decoration: none;
+  border-bottom: none;
 }
 
 .sorting-item-active a {
   color: #81b3d2;
-  text-decoration: none;
+  border-bottom: none;
+}
+
+.sorting-item-active a:hover {
+  color: #81b3d2;
+  border-bottom: none;
+}
+
+.sorting-item-active a:active {
+  color: #81b3d2;
+  border-bottom: none;
 }
 
 /*Список отелей*/
@@ -306,35 +352,34 @@ a {
   list-style: none;
 }
 
-.hotels-item h3 a {
+.hotel-name a {
   color: #000;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
-.hotels-item h3 a:hover {
+.hotel-name a:hover {
   color: #81b3d2;
 }
 
-.hotels-item h3 a:active {
-  color: ##cacaca;
+.hotel-name a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.hotels-rating {
+.hotel-rating {
   text-align: center;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   color: #666;
 }
 
 /*Футер*/
 
 .main-footer {
-  color: #000;
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.footer p {
+.main-footer p {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -343,8 +388,4 @@ a {
 
 .footer-social {
   list-style: none;
-}
-
-.footer-social a {
-  color: #000;
 }
