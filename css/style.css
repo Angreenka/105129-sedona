@@ -7,7 +7,7 @@ body {
   font-weight: 400;
   color: #333;
   text-transform: uppercase;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -16,7 +16,14 @@ a {
 
 /*Серая подложка*/
 
-.background {}
+.background {
+  max-width: 1200px;
+  min-width: 768px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,1,1,0.2 );
+}
+
+}
 
 /*Кнопки*/
 
@@ -83,7 +90,6 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000;
-  background-color: #fff;
 }
 
 .site-navigation {
@@ -102,14 +108,8 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation-current a {
-  color: #766357;
-}
-
-.site-navigation-current a:hover {
-  color: #766357;
-}
-
+.site-navigation-current a,
+.site-navigation-current a:hover,
 .site-navigation-current a:active {
   color: #766357;
 }
@@ -120,7 +120,6 @@ a {
 
 .intro {
   text-align: center;
-  background-color: #fff;
 }
 
 .intro .black {
@@ -136,13 +135,15 @@ a {
   list-style: none;
 }
 
-.feature-title {
+.feature-first,
+.feature-second {
   color: #fff;
   text-align: center;
   background-color: #81b3d2;
 }
 
-.feature-title h3 {
+.feature-first h3,
+.feature-second h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -164,7 +165,6 @@ a {
   color: #333;
   list-style: none;
   text-align: center;
-  background-color: #fff;
 }
 
 .features-extra h3 {
@@ -174,28 +174,25 @@ a {
   font-weight: 700;
 }
 
-.features-extra-first {
+.feature-extra-first-pic {
   background-image: url("../img/icon-1.svg");
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
-  background-color: #fff;
 }
 
-.features-extra-second {
+.feature-extra-second-pic {
   background-image: url("../img/icon-3.svg");
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
-  background-color: #fff;
 }
 
-.features-extra-third {
+.feature-extra-third-pic {
   background-image: url("../img/icon-2.svg");
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
-  background-color: #fff;
 }
 
 /*Второе преимущество*/
@@ -213,7 +210,6 @@ a {
 .feature-small {
   list-style: none;
   text-align: center;
-  background-color: #fff;
 }
 
 .feature-small h3 {
@@ -227,7 +223,6 @@ a {
 
 .booking {
   text-align: center;
-  background-color: #fff;
 }
 
 .booking h2 {
@@ -262,7 +257,6 @@ a {
 /*Форма с фильтрами*/
 
 .filters {
-  background-color: #fff;
   background-image: url("../img/hotels_bg.jpg");
   background-position: top left;
   background-repeat: no-repeat;
@@ -318,7 +312,7 @@ a {
 
 .sorting-item a {
   color: rgba(0, 0, 0, 0.3);
-  border-bottom: 1px dashed #81b3d2;
+  border-bottom: 1px dotted #81b3d2;
   text-decoration: none;
 }
 
@@ -331,16 +325,8 @@ a {
   border-bottom: none;
 }
 
-.sorting-item-active a {
-  color: #81b3d2;
-  border-bottom: none;
-}
-
-.sorting-item-active a:hover {
-  color: #81b3d2;
-  border-bottom: none;
-}
-
+.sorting-item-active a,
+.sorting-item-active a:hover,
 .sorting-item-active a:active {
   color: #81b3d2;
   border-bottom: none;
