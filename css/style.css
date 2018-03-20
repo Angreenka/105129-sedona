@@ -154,13 +154,14 @@ a {
   outline: 1px solid green;
 }
 
-.intro p{
+.intro p {
   text-align: center;
   width: 576px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   outline: 1px solid green;
 }
+
 .intro .black {
   color: #000;
   font-size: 21px;
@@ -170,9 +171,10 @@ a {
 }
 
 /* Преимущества*/
-.features{
+
+.features {
   margin-bottom: 60px;
-margin-top: 0px;
+  margin-top: 0px;
 }
 
 .features-list {
@@ -181,7 +183,6 @@ margin-top: 0px;
   list-style: none;
   outline: 1px solid green;
 }
-
 
 .feature-first, .feature-second {
   color: #fff;
@@ -194,7 +195,7 @@ margin-top: 0px;
 }
 
 .feature-title {
-  width:400px;
+  width: 400px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -213,7 +214,7 @@ margin-top: 0px;
   background-size: auto;
   background-repeat: no-repeat;
   background-color: #81b3d2;
-  width:800px;
+  width: 800px;
   outline: 1px solid green;
 }
 
@@ -291,7 +292,7 @@ margin-top: 0px;
   background-size: auto;
   background-repeat: no-repeat;
   background-color: #81b3d2;
-  width:800px;
+  width: 800px;
   outline: 1px solid red;
 }
 
@@ -334,8 +335,8 @@ margin-top: 0px;
 .booking {
   text-align: center;
   width: 576px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   outline: 1px solid red;
 }
 
@@ -496,7 +497,7 @@ margin-top: 0px;
   outline: 1px solid red;
 }
 
-.footer-conteiner{
+.footer-conteiner {
   margin-right: 100px;
-    outline: 1px solid red;
+  outline: 1px solid red;
 }
