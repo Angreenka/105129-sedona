@@ -17,12 +17,12 @@ a {
 /*Серая подложка*/
 
 .background {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1200px;
   min-width: 768px;
   background-color: #fff;
-  box-shadow: 0 0 15px rgba(0,1,1,0.2 );
-}
-
+  box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
 }
 
 /*Кнопки*/
@@ -81,7 +81,9 @@ a {
   background-color: #fff;
 }
 
-.visually-hidden {}
+.visually-hidden {
+  display: none;
+}
 
 /*Хедер*/
 
@@ -90,14 +92,44 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000;
+  outline: 1px solid red;
+}
+
+.main-navigation li {
+  display: inline-block;
+  width: 240px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  outline: 1px solid red;
+}
+
+.main-navigation li:nth-child(2) {
+  margin-right: 240px;
+  outline: 1px solid yellow;
+}
+
+.main-header-logo {
+  width: 138px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -68px;
+  outline: 1px solid red;
 }
 
 .site-navigation {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
 }
 
 .site-navigation a {
+  font-size: 14px;
   color: #000;
+  outline: 1px solid green;
 }
 
 .site-navigation a:hover {
@@ -108,9 +140,7 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation-current a,
-.site-navigation-current a:hover,
-.site-navigation-current a:active {
+.site-navigation-current a, .site-navigation-current a:hover, .site-navigation-current a:active {
   color: #766357;
 }
 
@@ -119,31 +149,57 @@ a {
 /*Лид*/
 
 .intro {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid green;
 }
 
+.intro p{
+  text-align: center;
+  width: 576px;
+  margin-left:auto;
+  margin-right:auto;
+  outline: 1px solid green;
+}
 .intro .black {
   color: #000;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  outline: 1px solid green;
 }
 
 /* Преимущества*/
-
-.features-list {
-  list-style: none;
+.features{
+  margin-bottom: 60px;
+margin-top: 0px;
 }
 
-.feature-first,
-.feature-second {
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 1px solid green;
+}
+
+
+.feature-first, .feature-second {
   color: #fff;
   text-align: center;
   background-color: #81b3d2;
+  display: flex;
+  justify-content: space-between;
+  min-height: 255px;
+  outline: 1px solid red;
 }
 
-.feature-first h3,
-.feature-second h3 {
+.feature-title {
+  width:400px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.feature-first h3, .feature-second h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -157,14 +213,27 @@ a {
   background-size: auto;
   background-repeat: no-repeat;
   background-color: #81b3d2;
+  width:800px;
+  outline: 1px solid green;
 }
 
 /*Дополнительные преимущества*/
 
 .features-extra {
   color: #333;
-  list-style: none;
   text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  min-height: 330px;
+  outline: 1px solid red;
+}
+
+.features-extra li {
+  width: 254px;
+  outline: 1px solid green;
 }
 
 .features-extra h3 {
@@ -174,11 +243,24 @@ a {
   font-weight: 700;
 }
 
+.feature-extra-first {
+  margin-left: 73px;
+}
+
+.features-extra-third {
+  margin-right: 60px;
+}
+
 .feature-extra-first-pic {
   background-image: url("../img/icon-1.svg");
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+  top: 0;
+  left: 50%;
+  outline: 1px solid blue;
 }
 
 .feature-extra-second-pic {
@@ -186,6 +268,9 @@ a {
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+  width: 74px;
+  height: 70px;
+  outline: 1px solid blue;
 }
 
 .feature-extra-third-pic {
@@ -193,6 +278,9 @@ a {
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+  width: 64px;
+  height: 76px;
+  outline: 1px solid blue;
 }
 
 /*Второе преимущество*/
@@ -203,13 +291,27 @@ a {
   background-size: auto;
   background-repeat: no-repeat;
   background-color: #81b3d2;
+  width:800px;
+  outline: 1px solid red;
 }
 
 /*Третье, четвертое, пятое преимущества*/
 
+.feature-small-conreiner {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  min-height: 255px;
+  outline: 1px solid red;
+}
+
 .feature-small {
   list-style: none;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 254px;
+  outline: 1px solid red;
 }
 
 .feature-small h3 {
@@ -219,10 +321,22 @@ a {
   font-weight: 700;
 }
 
+.feature-small:nth-child(1) {
+  margin-left: 73px;
+}
+
+.feature-small:nth-child(3) {
+  margin-right: 60px;
+}
+
 /*Бронирование*/
 
 .booking {
   text-align: center;
+  width: 576px;
+  margin-left:auto;
+  margin-right:auto;
+  outline: 1px solid red;
 }
 
 .booking h2 {
@@ -325,9 +439,7 @@ a {
   border-bottom: none;
 }
 
-.sorting-item-active a,
-.sorting-item-active a:hover,
-.sorting-item-active a:active {
+.sorting-item-active a, .sorting-item-active a:hover, .sorting-item-active a:active {
   color: #81b3d2;
   border-bottom: none;
 }
@@ -363,6 +475,11 @@ a {
 
 .main-footer {
   background-color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid red;
 }
 
 .main-footer p {
@@ -370,8 +487,16 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000;
+  margin-left: 130px;
+  outline: 1px solid red;
 }
 
 .footer-social {
   list-style: none;
+  outline: 1px solid red;
+}
+
+.footer-conteiner{
+  margin-right: 100px;
+    outline: 1px solid red;
 }
