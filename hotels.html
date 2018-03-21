@@ -47,7 +47,7 @@
           <fieldset>
             <legend>Тип жилья:</legend>
             <ul>
-              <li class="filter-option">
+              <li class="filter-option-2">
                 <input class="filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
                 <label for="filter-hotel">Гостиница</label>
               </li>
@@ -61,23 +61,21 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="range">
             <legend>Стоимость в сутки (р):</legend>
-            <div class="range">
-              <div class="range-inputs">
-                <label class="visually-hidden" for="input-from">От</label>
-                <input class="range-input" type="text" name="from" id="input-from" placeholder="От 0">
-                <label class="visually-hidden" for="input-to">До</label>
-                <input class="range-input" type="text" name="to" id="input-to" placeholder="До 3000">
-              </div>
-              <div class="range-slider">
-                <button type="button" class="slider-button">От</button>
-                <button type="button" class="slider-button">До</button>
-                <span class="slider-line">Шкала</span>
-              </div>
+            <div class="range-inputs">
+              <label class="visually-hidden" for="input-from">От</label>
+              <input class="range-input" type="text" name="from" id="input-from" placeholder="От 0">
+              <label class="visually-hidden" for="input-to">До</label>
+              <input class="range-input" type="text" name="to" id="input-to" placeholder="До 3000">
             </div>
+            <div class="range-slider">
+              <button type="button" class="slider-button">От</button>
+              <button type="button" class="slider-button">До</button>
+              <span class="slider-line">Шкала</span>
+            </div>
+            <button type="submit" class="button-white">Показать</button>
           </fieldset>
-          <button type="submit" class="button-white">Показать</button>
         </form>
       </section>
       <section class="sorting">
@@ -89,8 +87,10 @@
           <li class="sorting-item-inactive"><a href="#">По типу</a></li>
           <li class="sorting-item-inactive"><a href="#">По рейтингу</a></li>
         </ul>
-        <a class="button-arrow-up" href="#">Вверх</a>
-        <a class="button-arrow-down" href="#">Вниз</a>
+        <div class="button-arrow-conteiner">
+          <a class="button-arrow-up" href="#">Вверх</a>
+          <a class="button-arrow-down" href="#">Вниз</a>
+        </div>
       </section>
       <section class="hotels">
         <h2 class="visually-hidden">Список гостиниц</h2>
@@ -154,8 +154,10 @@
         <li><a class="social-button" href="#">Фейсбук</a></li>
         <li><a class="social-button" href="#">Ютуб</a></li>
       </ul>
-      <span class="footer-copyright">WEBSITE by</span>
-      <a class="academy-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_htmlacademy.svg" width="115" height="41" alt="Логотип HTML Академии"></a>
+      <div class="footer-conteiner">
+        <span class="footer-copyright">WEBSITE by</span>
+        <a class="academy-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_htmlacademy.svg" width="115" height="41" alt="Логотип HTML Академии"></a>
+      </div>
     </footer>
   </div>
 </body>

@@ -82,54 +82,54 @@ a {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /*Хедер*/
-
-.main-navigation {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 700;
-  color: #000;
-  outline: 1px solid red;
-}
-
-.main-navigation li {
-  display: inline-block;
-  width: 240px;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  outline: 1px solid red;
-}
-
-.main-navigation li:nth-child(2) {
-  margin-right: 240px;
-  outline: 1px solid yellow;
-}
 
 .main-header-logo {
   width: 138px;
   height: 70px;
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -68px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+  padding-top: 20px;
+  padding-bottom: 18px;
   outline: 1px solid red;
 }
 
 .site-navigation {
   list-style: none;
+  display: flex;
   margin: 0px;
   padding: 0px;
-  font-size: 0px;
+  outline: 1px solid red;
+}
+
+.site-navigation li {
+  text-align: center;
+  width: 20%;
+  padding-left: 6%;
+  padding-right: 6%;
+  outline: 1px solid green;
 }
 
 .site-navigation a {
   font-size: 14px;
   color: #000;
-  outline: 1px solid green;
 }
 
 .site-navigation a:hover {
@@ -198,6 +198,7 @@ a {
   width: 400px;
   padding-left: 60px;
   padding-right: 60px;
+  padding-top: 50px;
 }
 
 .feature-first h3, .feature-second h3 {
@@ -210,8 +211,8 @@ a {
 
 .feature-first-pic {
   background-image: url("../img/pic_1.jpg");
-  background-position: right;
-  background-size: auto;
+  background-position: center right;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #81b3d2;
   width: 800px;
@@ -227,13 +228,12 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   min-height: 330px;
   outline: 1px solid red;
 }
 
 .features-extra li {
-  width: 254px;
+  width: 33.33%;
   outline: 1px solid green;
 }
 
@@ -245,11 +245,18 @@ a {
 }
 
 .feature-extra-first {
-  margin-left: 73px;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.feature-extra-second {
+  padding-left: 55px;
+  padding-right: 55px;
 }
 
 .features-extra-third {
-  margin-right: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .feature-extra-first-pic {
@@ -288,8 +295,8 @@ a {
 
 .feature-second-pic {
   background-image: url("../img/pic_2.jpg");
-  background-position: right;
-  background-size: auto;
+  background-position: center right;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #81b3d2;
   width: 800px;
@@ -301,7 +308,6 @@ a {
 .feature-small-conreiner {
   background-color: #eee;
   display: flex;
-  justify-content: space-between;
   min-height: 255px;
   outline: 1px solid red;
 }
@@ -311,7 +317,7 @@ a {
   text-align: center;
   margin: 0;
   padding: 0;
-  width: 254px;
+  width: 33.33%;
   outline: 1px solid red;
 }
 
@@ -323,11 +329,18 @@ a {
 }
 
 .feature-small:nth-child(1) {
-  margin-left: 73px;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.feature-small:nth-child(2) {
+  padding-left: 65px;
+  padding-right: 65px;
 }
 
 .feature-small:nth-child(3) {
-  margin-right: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /*Бронирование*/
@@ -349,10 +362,28 @@ a {
 
 /*Форма бронирования*/
 
+.modal-booking {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 55px;
+  max-width: 568px;
+  min-height: 395px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 1, 1, 0.15);
+  outline: 1px solid red;
+}
+
+.booking-form {
+  outline: 1px solid red;
+}
+
 .modal-booking input {
   font: inherit;
   background-color: #f2f2f2;
   border: 2px solid #f2f2f2;
+  outline: 1px solid red;
 }
 
 .modal-booking input:hover {
@@ -373,12 +404,27 @@ a {
 
 .filters {
   background-image: url("../img/hotels_bg.jpg");
-  background-position: top left;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-color: #81b3d2;
+  max-width: 1200px;
+  min-width: 768px;
+  min-height: 215px;
+  outline: 1px solid red;
 }
+
+.filter {
+  display: flex;
+  justify-content: space-around;
+  min-height: 215px;
+  outline: 1px solid red;
+}
+
 
 .filters fieldset {
   border: none;
+  outline: 1px solid green;
 }
 
 .filter legend {
@@ -393,6 +439,7 @@ a {
   font-size: 14px;
   line-height: 21px;
   color: #fff;
+  outline: 1px solid red;
 }
 
 .filter-input-checkbox:disabled {
@@ -408,11 +455,20 @@ a {
 
 /*Сортировка*/
 
+.sorting {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  outline: 1px solid red;
+}
+
 .sorting p {
   color: #000;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin-left: 70px;
+  margin-right: 50px;
 }
 
 .sorting h3 {
@@ -423,6 +479,12 @@ a {
 
 .sorting-item {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  min-width: 240px;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid red;
 }
 
 .sorting-item a {
@@ -430,7 +492,10 @@ a {
   border-bottom: 1px dotted #81b3d2;
   text-decoration: none;
 }
-
+.button-arrow-conteiner{
+  margin-left: auto;
+  margin-right: 70px;
+}
 .sorting-item a:hover {
   color: #81b3d2;
 }
@@ -444,11 +509,41 @@ a {
   color: #81b3d2;
   border-bottom: none;
 }
-
+.range-slider{
+  margin-left: auto;
+}
 /*Список отелей*/
 
 .hotels-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid red;
+}
+
+.hotel-item {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  min-height: 100px;
+  width: 100%;
+  outline: 1px solid blue;
+}
+
+.hotel-item-img {
+  margin-left: 70px;
+  margin-right: 30px;
+  outline: 1px solid red;
+}
+
+.hotel-item-info {
+  outline: 1px solid red;
+}
+
+.hotel-item-rating {
+  margin-left: auto;
+  margin-right: 70px;
+  outline: 1px solid red;
 }
 
 .hotel-name a {
@@ -456,6 +551,7 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  outline: 1px solid blue;
 }
 
 .hotel-name a:hover {
@@ -467,6 +563,7 @@ a {
 }
 
 .hotel-rating {
+  float: right;
   text-align: center;
   background-color: #F2F2F2;
   color: #666;
