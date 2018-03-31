@@ -71,6 +71,9 @@ img {
 }
 
 .button-white {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
   font: inherit;
   text-align: center;
   vertical-align: middle;
@@ -79,6 +82,7 @@ img {
   background-color: transparent;
   border: 2px solid #fff;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .button-white:hover, .button-white:active {
@@ -159,8 +163,8 @@ img {
 /*Лид*/
 
 .intro {
-  margin: 0;
   padding: 0;
+  margin: 0;
   outline: 1px solid green;
 }
 
@@ -169,6 +173,8 @@ img {
   width: 576px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 62px;
+  margin-bottom: 38px;
   outline: 1px solid green;
 }
 
@@ -177,6 +183,8 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 55px;
   outline: 1px solid green;
 }
 
@@ -244,6 +252,7 @@ img {
 
 .features-extra li {
   width: 33.33%;
+  position: relative;
   outline: 1px solid green;
 }
 
@@ -257,47 +266,67 @@ img {
 .feature-extra-first {
   padding-left: 73px;
   padding-right: 73px;
+  padding-top: 160px;
+  outline: 1px solid blue;
 }
 
 .feature-extra-second {
   padding-left: 55px;
   padding-right: 55px;
+  padding-top: 160px;
+  outline: 1px solid blue;
 }
 
 .features-extra-third {
   padding-left: 60px;
   padding-right: 60px;
-}
-
-.feature-extra-first-pic {
-  background-image: url("../img/icon-1.svg");
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  width: 75px;
-  height: 72px;
-  top: 0;
-  left: 50%;
+  padding-top: 160px;
   outline: 1px solid blue;
 }
 
-.feature-extra-second-pic {
-  background-image: url("../img/icon-3.svg");
+.feature-extra-first::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 72px;
+  top: 60px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  outline: 1px solid blue;
+}
+
+.feature-extra-second::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/icon-2.svg");
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
   width: 74px;
   height: 70px;
+  top: 60px;
+  right: 0;
+  left: 0;
+  margin: auto;
   outline: 1px solid blue;
 }
 
-.feature-extra-third-pic {
-  background-image: url("../img/icon-2.svg");
+.features-extra-third::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/icon-3.svg");
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
   width: 64px;
   height: 76px;
+  top: 60px;
+  right: 0;
+  left: 0;
+  margin: auto;
   outline: 1px solid blue;
 }
 
@@ -415,9 +444,15 @@ img {
 }
 
 .booking-item {
+  position: relative;
   margin: 0;
   margin-bottom: 30px;
   outline: 1px solid red;
+}
+
+.booking-item legend {
+  display: block;
+  margin-right: 18px;
 }
 
 .modal-booking input {
@@ -445,15 +480,36 @@ img {
   border: 2px solid #e5e5e5;
 }
 
-.button-calendar{
-  padding-right:9px;
-  position: relative;
+.button-calendar {
+  position: absolute;
+  padding-right: 9px;
   top: 8px;
-  background-image: url("..img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 21px;
-  height: 22px;
+  background-color: transparent;
+  border: none;
+}
+
+.button-calendar:hover path {
+  fill: #000;
+}
+
+.button-calendar:active path {
+  fill: #81b3d2;
+}
+
+.button-amount {
+  position: absolute;
+  padding-right: 9px;
+  top: 8px;
+  background-color: transparent;
+  border: none;
+}
+
+.button-amount:hover path {
+  fill: #000;
+}
+
+.button-amount:active path {
+  fill: #81b3d2;
 }
 
 /*Карта*/
@@ -518,6 +574,93 @@ img {
   border-radius: 2px;
 }
 
+.range {
+  width: 330px;
+  margin-right: 73px;
+  margin-left: auto;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.range ledend {
+  margin-bottom: 9px;
+}
+
+.range-inputs {
+  position: relative;
+  font-size: 0;
+  height: 36px;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+.range-inputs::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+
+.range-inputs input {
+  width: 90px;
+  padding-left: 65px;
+  margin: 0;
+  color: #fff;
+  font: inherit;
+  background: none;
+  border: none;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.range-slider {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-slider .slider-line {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .slider-progress {
+  width: 80%;
+  height: 2px;
+  background: #fff;
+}
+
+.range-slider button {
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+}
+
+.slider-button-min {
+  left: 0;
+}
+
+.slider-button-max {
+  left: 80%;
+}
+
+.range-slider {
+  margin-left: auto;
+}
+
 /*Сортировка*/
 
 .sorting {
@@ -575,10 +718,6 @@ img {
 .sorting-item-active a, .sorting-item-active a:hover, .sorting-item-active a:active {
   color: #81b3d2;
   border-bottom: none;
-}
-
-.range-slider {
-  margin-left: auto;
 }
 
 /*Список отелей*/
@@ -699,4 +838,12 @@ img {
 .footer-conteiner {
   margin-right: 100px;
   outline: 1px solid red;
+}
+
+.academy-footer-logo:hover path {
+  fill: #81b3d2;
+}
+
+.social-button:active path {
+  fill: #bdbbbc;
 }
